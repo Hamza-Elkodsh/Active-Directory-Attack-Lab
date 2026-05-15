@@ -1,0 +1,234 @@
+# ============================================================
+# Active Directory Attack Lab — .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Vagrant
+# ------------------------------------------------------------
+.vagrant/
+*.box
+override.tf
+*.tfstate
+*.tfstate.backup
+
+# ------------------------------------------------------------
+# Virtual Machine files
+# ------------------------------------------------------------
+*.vmdk
+*.vdi
+*.vhd
+*.vhdx
+*.iso
+*.ova
+*.ovf
+*.nvram
+*.vmx
+*.vmxf
+*.vmsd
+*.vmsn
+*.vmss
+*.vmem
+
+# ------------------------------------------------------------
+# Sensitive files — NEVER commit these
+# ------------------------------------------------------------
+
+# Credentials and secrets
+*.ntds
+*.dit
+ntds.dit
+SYSTEM
+SAM
+SECURITY
+*.hash
+*.hashes
+hashes/
+loot/
+creds/
+credentials/
+secrets/
+*.credential
+
+# Kerberos tickets
+*.ccache
+*.kirbi
+tickets/
+
+# Private keys and certificates
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+*.cer
+*.der
+id_rsa
+id_ed25519
+*.ppk
+
+# Environment variables and config secrets
+.env
+.env.*
+*.secret
+config.local.*
+local.conf
+secrets.yml
+secrets.yaml
+
+# ------------------------------------------------------------
+# Tools and binaries — do not commit tool executables
+# ------------------------------------------------------------
+tools/
+binaries/
+mimikatz/
+Mimikatz/
+*.exe
+*.dll
+*.ps1.bak
+
+# BloodHound output
+*.zip
+BloodHound/
+bloodhound-data/
+*.json.bak
+
+# Impacket output
+*.ccache
+*.dmp
+
+# Wordlists (large files — reference externally)
+# Uncomment if you want to exclude all wordlists:
+# resources/wordlists/*.txt
+
+# ------------------------------------------------------------
+# OS generated files
+# ------------------------------------------------------------
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Icon?
+
+# Windows
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ------------------------------------------------------------
+# Editor and IDE files
+# ------------------------------------------------------------
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Vim / Neovim
+*.swp
+*.swo
+*.swn
+Session.vim
+.netrwhist
+tags
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+
+# ------------------------------------------------------------
+# Logs and output files
+# ------------------------------------------------------------
+logs/
+*.log
+*.out
+*.pcap
+*.pcapng
+output/
+results/
+captures/
+
+# Nmap output
+*.nmap
+*.gnmap
+*.xml.bak
+
+# ------------------------------------------------------------
+# Reporting — exclude sensitive completed reports
+# ------------------------------------------------------------
+# Keep templates, exclude actual client/lab reports
+reporting/findings/completed/
+reporting/findings/*.pdf
+reporting/findings/*-final.*
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+*.rej
+
+# ------------------------------------------------------------
+# Compressed archives (usually contain sensitive data)
+# ------------------------------------------------------------
+# *.zip     <- uncomment if you want to block all zips
+# *.tar
+# *.tar.gz
+# *.tgz
+# *.tar.bz2
+# *.7z
+# *.rar
+
+# ------------------------------------------------------------
+# Notes — keep personal notes out of git
+# ------------------------------------------------------------
+notes/
+personal-notes/
+todo.md
+scratch.md
+NOTES.md
